@@ -4,3 +4,7 @@ app = Flask(__name__)
 @app.route('/home')
 def home():
     return 'home'
+
+@app.route('/phw')
+def phw():
+    return 'phw'
