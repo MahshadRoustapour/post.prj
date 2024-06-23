@@ -13,3 +13,7 @@ def home():
 @app.route('/phw')
 def phw():
     return 'phw'
+
+@app.route('/articles')
+def articles():
+    return 'articles'
