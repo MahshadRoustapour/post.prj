@@ -1,0 +1,102 @@
+[
+    {
+        "image_path": "/path/to/image1.jpg",
+        "title": "Sunset at the Beach",
+        "tags": "sunset",
+        "description": "A beautiful sunset at the beach with golden hues lighting up the sky and reflecting on the water.",
+        "category": "travel",
+        "photographer_code": "P001",
+        "photographer_name": "Ali Rezaei",
+        "photographer_email": "ali.rezaei@example.com"
+    },
+    {
+        "image_path": "/path/to/image2.jpg",
+        "title": "Mountain Range",
+        "tags": "hiking",
+        "description": "A stunning mountain range, perfect for hiking enthusiasts looking for breathtaking views.",
+        "category": "nature",
+        "photographer_code": "P002",
+        "photographer_name": "Sara Mohammadi",
+        "photographer_email": "sara.mohammadi@example.com"
+    },
+    {
+        "image_path": "/path/to/image3.jpg",
+        "title": "City Lights",
+        "tags": "night",
+        "description": "The city comes alive at night with vibrant lights and a bustling atmosphere.",
+        "category": "urban",
+        "photographer_code": "P003",
+        "photographer_name": "Hossein Karimi",
+        "photographer_email": "hossein.karimi@example.com"
+    },
+    {
+        "image_path": "/path/to/image4.jpg",
+        "title": "Rainforest Waterfall",
+        "tags": "waterfall",
+        "description": "A serene rainforest waterfall surrounded by lush greenery and exotic wildlife.",
+        "category": "nature",
+        "photographer_code": "P002",
+        "photographer_name": "Sara Mohammadi",
+        "photographer_email": "sara.mohammadi@example.com"
+    },
+    {
+        "image_path": "/path/to/image5.jpg",
+        "title": "Desert Dunes",
+        "tags": "desert",
+        "description": "Majestic desert dunes with rippling sands stretching as far as the eye can see.",
+        "category": "travel",
+        "photographer_code": "P001",
+        "photographer_name": "Ali Rezaei",
+        "photographer_email": "ali.rezaei@example.com"
+    },
+    {
+        "image_path": "/path/to/image6.jpg",
+        "title": "Ocean Waves",
+        "tags": "ocean",
+        "description": "The calming effect of ocean waves crashing against the shore, creating a soothing symphony.",
+        "category": "nature",
+        "photographer_code": "P004",
+        "photographer_name": "Maryam Ahmadi",
+        "photographer_email": "maryam.ahmadi@example.com"
+    },
+    {
+        "image_path": "/path/to/image7.jpg",
+        "title": "Forest Trail",
+        "tags": "forest",
+        "description": "A tranquil forest trail perfect for a peaceful walk amidst nature's beauty.",
+        "category": "nature",
+        "photographer_code": "P005",
+        "photographer_name": "Reza Jafari",
+        "photographer_email": "reza.jafari@example.com"
+    },
+    {
+        "image_path": "/path/to/image8.jpg",
+        "title": "City Skyline",
+        "tags": "city",
+        "description": "The magnificence of the city skyline, capturing the essence of urban life.",
+        "category": "urban",
+        "photographer_code": "P003",
+        "photographer_name": "Hossein Karimi",
+        "photographer_email": "hossein.karimi@example.com"
+    },
+    {
+        "image_path": "/path/to/image9.jpg",
+        "title": "Winter Wonderland",
+        "tags": "winter",
+        "description": "Experiencing the magic of winter wonderland with snow-covered landscapes and a cozy atmosphere.",
+        "category": "seasonal",
+        "photographer_code": "P006",
+        "photographer_name": "Fatemeh Ebrahimi",
+        "photographer_email": "fatemeh.ebrahimi@example.com"
+    },
+    {
+        "image_path": "/path/to/image10.jpg",
+        "title": "Autumn Leaves",
+        "tags": "autumn",
+        "description": "The beauty of autumn leaves, showcasing a palette of vibrant colors as they fall.",
+        "category": "seasonal",
+        "photographer_code": "P007",
+        "photographer_name": "Mahdi Ghasemi",
+        "photographer_email": "mahdi.ghasemi@example.com"
+    }
+]
