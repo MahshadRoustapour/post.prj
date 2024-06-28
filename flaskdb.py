@@ -3,7 +3,6 @@ import csv
 import json
 from pymongo import MongoClient
 from flask_cors import CORS
-from flask_pymongo import PyMongo
 
 def csv_to_json(csvname, jsonname):
 
