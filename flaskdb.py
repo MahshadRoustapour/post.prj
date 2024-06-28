@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import csv
 import json
 from pymongo import MongoClient
@@ -16,6 +16,11 @@ def csv_to_json(csvname, jsonname):
 
     with open(jsonname, 'w', encoding='utf-8') as jsonfile:
         jsonfile.write(json.dumps(data_dict, indent = 4))
+
+def read_json(jsonname):
+    with open(jsonname, "r", encoding = 'utf-8') as jsonfile:
+        data = json.laod(jsonfile)
+    return data
     
 csvfile = 'images.csv'
 json_file = 'images.json'
@@ -25,18 +30,21 @@ csvfile2 = 'articles.csv'
 jsonfile2 = 'articles.json'
 csv_to_json(csvfile2, jsonfile2)
 
-def read_data():
-    with open("config.json", "r") as config_file:
-        config = json.laod(config_file)
-    return config
+images_data = read_json(json_file)
+articles_data = read_json(json_file)
 
-config = read_data()
-client = MongoClient(config["connection"])
-db = client[config["db_name"]]
-images = db[config["images_collection"]]
-articles = db[config["articles_collection"]]
+client = MongoClient("mongodb://localhost:27017")
+db = client["post.prj"]
+images_collection = db["images"]
+articles_collection = db["articles"]
 
-print("connected")
+images_collection.delete_many({})
+images_collection.insert_many(images_data)
+
+articles_collection.delete_many({})
+articles_collection.insert_many(articles_data)
+
+print("data inserted into mongoDB")
 
 app = Flask(__name__)
 #send a request to server
