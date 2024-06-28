@@ -59,4 +59,5 @@ def phw():
 def articles():
     return render_template('articles.html')
 
-def 
+if __name__ == "__main__":
+    app.run(debug = True)
