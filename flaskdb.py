@@ -49,6 +49,9 @@ app = Flask(__name__)
 
 #send a request to server
 cors = CORS(app)
+@app.route('/')
+def main():
+    return "Hello user"
 
 @app.route('/images')
 def images():
@@ -66,12 +69,12 @@ def phw():
 def articles():
     return render_template('articles.html')
 
-@app.route('/api/images', methods = ['GET'])
+@app.route('/api/images', methods=['GET'])
 def get_images():
     images = list(images_collection.find({} , {"_id" : 0}))
     return jsonify(images)
 
-@app.route('/api/articles', methods = ['GET'])
+@app.route('/api/articles', methods=['GET'])
 def get_articles():
     articles = list(articles_collection.find({} , {"_id" : 0}))
     return jsonify(articles)
