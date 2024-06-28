@@ -1,0 +1,7 @@
+{
+    "connection" : "mongodb://localhost:27017",
+    "db_name" : "mars", 
+    "images_collection" : "images",
+    "articles_collection" : "articles",
+    "user_collection" : "user"
+}
