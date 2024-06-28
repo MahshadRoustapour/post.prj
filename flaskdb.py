@@ -18,7 +18,7 @@ def csv_to_json(csvname, jsonname):
 
 def read_json(jsonname):
     with open(jsonname, "r", encoding = 'utf-8') as jsonfile:
-        data = json.laod(jsonfile)
+        data = json.load(jsonfile)
     return data
     
 csvfile = 'images.csv'
@@ -33,7 +33,7 @@ images_data = read_json(json_file)
 articles_data = read_json(json_file)
 
 client = MongoClient("mongodb://localhost:27017")
-db = client["post.prj"]
+db = client["post_prj"]
 images_collection = db["images"]
 articles_collection = db["articles"]
 
@@ -47,9 +47,9 @@ print("data inserted into mongoDB")
 
 
 app = Flask(__name__)
+
 #send a request to server
 cors = CORS(app)
-
 
 @app.route('/images')
 def images():
