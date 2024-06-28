@@ -45,6 +45,7 @@ articles_collection.insert_many(articles_data)
 
 print("data inserted into mongoDB")
 
+
 app = Flask(__name__)
 #send a request to server
 cors = CORS(app)
@@ -65,6 +66,11 @@ def phw():
 @app.route('/articles')
 def articles():
     return render_template('articles.html')
+
+@app.route('/api/images', methods = ['GET'])
+def get_images():
+    images = list(images_collection.find({}, {"_id" : 0}))
+    return jsonify(images)
 
 if __name__ == "__main__":
     app.run(debug = True)
