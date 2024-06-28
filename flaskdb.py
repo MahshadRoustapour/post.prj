@@ -5,7 +5,6 @@ from pymongo import MongoClient
 from flask_cors import CORS
 
 def csv_to_json(csvname, jsonname):
-
     filec = open(csvname)
     data = csv.DictReader(filec)
     data_dict = []
@@ -14,10 +13,10 @@ def csv_to_json(csvname, jsonname):
         data_dict.append(rows)
 
     with open(jsonname, 'w', encoding='utf-8') as jsonfile:
-        jsonfile.write(json.dumps(data_dict, indent = 4))
+        jsonfile.write(json.dumps(data_dict, indent=4))
 
 def read_json(jsonname):
-    with open(jsonname, "r", encoding = 'utf-8') as jsonfile:
+    with open(jsonname, "r", encoding ='utf-8') as jsonfile:
         data = json.load(jsonfile)
     return data
     
@@ -30,9 +29,9 @@ jsonfile2 = 'articles.json'
 csv_to_json(csvfile2, jsonfile2)
 
 images_data = read_json(json_file)
-articles_data = read_json(json_file)
+articles_data = read_json(jsonfile2)
 
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://localhost:27017/")
 db = client["post_prj"]
 images_collection = db["images"]
 articles_collection = db["articles"]
