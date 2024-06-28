@@ -69,8 +69,13 @@ def articles():
 
 @app.route('/api/images', methods = ['GET'])
 def get_images():
-    images = list(images_collection.find({}, {"_id" : 0}))
+    images = list(images_collection.find({} , {"_id" : 0}))
     return jsonify(images)
+
+@app.route('/api/articles', methods = ['GET'])
+def get_articles():
+    articles = list(articles_collection.find({} , {"_id" : 0}))
+    return jsonify(articles)
 
 if __name__ == "__main__":
     app.run(debug = True)
