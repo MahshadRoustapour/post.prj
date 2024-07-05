@@ -51,7 +51,7 @@ cors = CORS(app)
 
 @app.route('/')
 def main():
-    return "Hello user"
+    return render_template('navbar.html')
 
 @app.route('/images')
 def images():
