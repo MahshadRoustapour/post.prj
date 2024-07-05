@@ -7,9 +7,14 @@
 </head>
 <body>
 
-   {% block navbar %}{% blockend %}
+   {% block navbar %}
+   {% include 'navbar.html' %}
+   {% blockend %}
 
-   {% include 'navbar.html'%}
+   <main>
+    {% block content %}
+    {% endblock %}
+   </main>
     
     
 </body>
