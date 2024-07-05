@@ -79,5 +79,21 @@ def get_articles():
     articles = list(articles_collection.find({} ,{"_id" : 0}))
     return jsonify(articles)
 
+@app.route("/search")
+def view_images():
+    massage = input("which field would you like to search? (images/articles)")
+    site_images = images_collection.find({} , {"_id " : 0})
+    site_articles = articles_collection.find({} , {"_id " : 0})
+    if massage == "images":
+        for post in site_images:
+            for k, v in post.items():
+                print(f"{k} ----> {v}")
+            print()
+    elif massage == "articles":
+        for post in site_articles:
+            for k, v in post.items():
+                print(f"{k} ----> {v}")
+            print()
+
 if __name__ == "__main__":
     app.run(debug = True)
